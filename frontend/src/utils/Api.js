@@ -9,7 +9,6 @@ class Api {
 
   constructor(options) {
     this._url = options.url;
-    this._headers = options.headers;
   }
 
   getUserInfo() {
@@ -82,10 +81,6 @@ class Api {
 
 const api = new Api({
   url: "https://project.christinochka.nomoredomainsclub.ru",
-  headers: {
-    authorization: "b75081c3-63ae-4231-8d9c-4e1ac7e43aad",
-    "Content-Type": "application/json",
-  },
 });
 
 
