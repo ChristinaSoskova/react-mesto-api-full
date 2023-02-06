@@ -81,7 +81,7 @@ class Api {
 }
 
 const api = new Api({
-  url: "https://mesto.nomoreparties.co/v1/cohort-51",
+  url: "https://project.christinochka.nomoredomainsclub.ru",
   headers: {
     authorization: "b75081c3-63ae-4231-8d9c-4e1ac7e43aad",
     "Content-Type": "application/json",
