@@ -6,10 +6,10 @@
 
 Стек: HTML, CSS, JavaScripts, React.js, React Router, API, Node.js, Express.js, ESLint, MongoDB, Webpack, БЭМ, ООП, Git.
 
-![Ссылка на проект](https://christinochka.nomoredomainsclub.ru)
+[Ссылка на проект](https://christinochka.nomoredomainsclub.ru)
 
 IP 158.160.21.246
 Frontend christinochka.nomoredomainsclub.ru
 Backend project.christinochka.nomoredomainsclub.ru
 
-![Ссылка на репозиторий](https://github.com/ChristinaSoskova/react-mesto-api-full/tree/main/backend)
+[Ссылка на репозиторий](https://github.com/ChristinaSoskova/react-mesto-api-full)
