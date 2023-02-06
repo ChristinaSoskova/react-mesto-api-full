@@ -12,4 +12,4 @@ IP 158.160.21.246
 Frontend christinochka.nomoredomainsclub.ru
 Backend project.christinochka.nomoredomainsclub.ru
 
-[Ссылка на репозиторий](https://github.com/ChristinaSoskova/react-mesto-api-full/tree/main/backend)
+[Ссылка на репозиторий](https://github.com/ChristinaSoskova/react-mesto-api-full)
