@@ -1,4 +1,4 @@
-export const baseUrl = "https://christinochka.nomoredomainsclub.ru";
+export const baseUrl = "https://project.christinochka.nomoredomainsclub.ru";
 
 export const register = (email, password) => {
   return fetch(`${baseUrl}/signup`, {

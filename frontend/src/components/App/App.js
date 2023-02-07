@@ -103,8 +103,8 @@ function App() {
   function handleRegister({ email, password }) {
     auth
       .register(email, password)
-      .then((data) => {
-        if (data.data._id) {
+      .then((res) => {
+        if (res) {
           setIsCheckPopupOpen({ isOpen: true, successful: true });
           history.push("/sign-in");
         }
