@@ -88,7 +88,7 @@ function App() {
       auth
         .getToken(jwt)
         .then((res) => {
-          if (res) {
+          if (res.data) {
             setPersonEmail(res.data.email);
             setLoggedIn(true);
             history.push("/");
@@ -151,7 +151,6 @@ function App() {
 
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
-
     api
       .toggleLike(card._id, isLiked)
       .then((newCard) => {

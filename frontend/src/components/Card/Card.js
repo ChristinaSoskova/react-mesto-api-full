@@ -4,9 +4,12 @@ import React from "react";
 function Card(props) {
   const currentUser = React.useContext(CurrentUserContext);
   const isOwn = props.card.owner._id === currentUser._id;
-
-  const isLiked = props.card.likes.some((i) => i._id === currentUser._id);
-
+   console.log(isOwn);
+   console.log(props.card.owner._id);
+  const cardDeleteButtonClassName = (
+    `element__delete-button ${isOwn ? 'elements__delete-button' : 'elements__delete-button_hidden'}`);
+ 
+  const isLiked = props.card.likes.some(i => i === currentUser._id);
   const cardLikeButtonClassName = `element__like-button ${
     !isLiked ? "element__like-button" : "element__like-button_type_click"
   }`;
@@ -30,14 +33,7 @@ function Card(props) {
         alt={`${props.card.name}`}
         onClick={handleClick}
       />
-      {isOwn && (
-        <button
-          type="reset"
-          className="element__delete-button"
-          onClick={handleCardDelete}
-        ></button>
-      )}
-      <div className="element__rectangle">
+      <button type="button" className={`element__delete-button ${cardDeleteButtonClassName}`} aria-label="удалить карточку" onClick={handleCardDelete} ></button>      <div className="element__rectangle">
         <h2 className="element__title">{props.card.name}</h2>
         <div className="element__likes">
           <button

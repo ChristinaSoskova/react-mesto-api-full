@@ -2,7 +2,7 @@
 @import url(../src/vendor/fonts/fonts.css);
 @import url(../src/blocks/root/root.css);
 @import url(../src/blocks/header/header.css);
-@import url(../src/blocks/header/__logo/header__logo.css);
+@url(../src/blocks/header/__logo/header__logo.css);
 @import url(../src/blocks/content/content.css);
 @import url(../src/blocks/profile/profile.css);
 @import url(../src/blocks/profile/__avatar/profile__avatar.css);
@@ -52,3 +52,5 @@
 @import url(../src/blocks/header/__button/header__button.css);
 @import url(../src/blocks/header/__links/header__links.css);
 @import url(../src/blocks/header/__email/header__email.css);
+@import url(../src/blocks/element/__delete-button/_visible/elements__delete-button_visible.css);
+@import url(../src/blocks/element/__delete-button/_hidden/elements__delete-button_hidden.css);
