@@ -88,8 +88,8 @@ function App() {
       auth
         .getToken(jwt)
         .then((res) => {
-          if (res.data) {
-            setPersonEmail(res.data.email);
+          if (res) {
+            setPersonEmail(res.email);
             setLoggedIn(true);
             history.push("/");
           }
@@ -150,10 +150,10 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((id) => id === currentUser._id);
     api
       .toggleLike(card._id, isLiked)
-      .then((newCard) => {
+      .then(({data: newCard}) => {
         setRenderCards((state) =>
           state.map((c) => (c._id === card._id ? newCard : c))
         );
@@ -165,7 +165,6 @@ function App() {
 
   function handleAddPlaceSubmit(card) {
     setIsLoading(true);
-
     api
       .getAddCard(card)
       .then((newCard) => {

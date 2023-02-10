@@ -61,7 +61,7 @@ module.exports.likeCard = (req, res, next) => cardSchema
     if (!card) {
       throw new NotFound('Передан несуществующий _id карточки');
     }
-    res.send({ data: card });
+    res.send(card);
   })
   // eslint-disable-next-line consistent-return
   .catch((error) => {
@@ -81,11 +81,12 @@ module.exports.dislikeCard = (req, res, next) => cardSchema
     { $pull: { likes: req.user._id } }, // убрать _id из массива
     { new: true },
   )
+  .populate(['owner', 'likes'])
   .then((card) => {
     if (!card) {
       throw new NotFound('Передан несуществующий _id карточки');
     }
-    res.send({ data: card });
+    res.send(card);
   })
   // eslint-disable-next-line consistent-return
   .catch((error) => {
