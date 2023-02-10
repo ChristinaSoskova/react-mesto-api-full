@@ -8,7 +8,10 @@ module.exports.createCard = (req, res, next) => {
   const owner = req.user._id;
   cardSchema
     .create({ name, link, owner })
-    .then((card) => res.send(card))
+    .then((card) => {
+      cardSchema.populate(card, ['owner'])
+        .then((newcard) => res.send(newcard));
+    })
     .catch((error) => {
       if (error.name === 'ValidationError') {
         next(

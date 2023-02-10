@@ -153,7 +153,7 @@ function App() {
     const isLiked = card.likes.some((id) => id === currentUser._id);
     api
       .toggleLike(card._id, isLiked)
-      .then(({data: newCard}) => {
+      .then((newCard) => {
         setRenderCards((state) =>
           state.map((c) => (c._id === card._id ? newCard : c))
         );
