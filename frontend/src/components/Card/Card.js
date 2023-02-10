@@ -4,9 +4,6 @@ import React from "react";
 function Card(props) {
   const currentUser = React.useContext(CurrentUserContext);
   const isOwn = props.card.owner._id === currentUser._id;
-  console.log(currentUser);
-  //  console.log(isOwn);
-  //  console.log(props.card.owner._id);
   const cardDeleteButtonClassName = (
     `element__delete-button ${isOwn ? 'elements__delete-button' : 'elements__delete-button_hidden'}`);
  
